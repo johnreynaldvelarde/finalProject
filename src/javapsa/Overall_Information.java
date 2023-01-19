@@ -113,6 +113,31 @@ public class Overall_Information {
     
     }
     
+    // method to show the new created psa birth certificate
+    
+    public void getNew(){
+         System.out.println("");
+         System.out.println("");
+         System.out.println("");
+         System.out.println("=========================================================================");
+         System.out.println("                      CERTIFICATE OF LIVE BIRTH                          ");
+         System.out.println("=========================================================================");
+         System.out.println(" Registry No: "+d.getNumber()                                             );
+         System.out.println("=========================================================================");
+         System.out.println("-------------------------------------------------------------------------");
+         System.out.println(" 1. CHILD NAME       (First)            (Middle)            (Last)       ");
+         System.out.println("-------------------------------------------------------------------------");
+         System.out.println("                  "+d.getcName()+"           "+d.getcMiddle()+"              "+d.getcLast()   );
+         System.out.println("-------------------------------------------------------------------------");
+         System.out.println("");
+         System.out.println("");
+         System.out.println("=========================================================================");
+    
+    
+    
+    
+    }
+    
      // search a certain record  
      public void getSearch(){
         
@@ -130,9 +155,28 @@ public class Overall_Information {
             System.out.println("                            RECORD FOUND                                 ");
             System.out.println("-------------------------------------------------------------------------");
             System.out.println("");
-            System.out.println("First Name " + record.get(1));
-            System.out.println("Middle Name " + record.get(2));
-            System.out.println("Last Name " + record.get(0));
+            System.out.println("");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("=========================================================================");
+            System.out.println("                      CERTIFICATE OF LIVE BIRTH                          ");
+            System.out.println("=========================================================================");
+            System.out.println(" Registry No: "+key                                                       );
+            System.out.println("=========================================================================");
+            System.out.println("-------------------------------------------------------------------------");
+            System.out.println(" 1. CHILD NAME       (First)            (Middle)            (Last)       ");
+            System.out.println("-------------------------------------------------------------------------");
+            System.out.println("                  "+record.get(2)+"           "+record.get(1)+"              "+record.get(0));
+            System.out.println("-------------------------------------------------------------------------");
+            System.out.println("");
+            System.out.println("");
+            System.out.println("=========================================================================");
+    
+            
+            
+            
+            
+        
         }
         else{
             

@@ -21,7 +21,7 @@ public class Selection {
                 System.out.println("        Press [1] to create new PSA birth certificate                    ");
                 System.out.println("        Press [2] to view the new created PSA birth certificate          ");
                 System.out.println("        Press [3] to show the list of existing PSA birth certificate     ");
-                System.out.println("        Press [4] to delete the birth certificate                        ");
+                System.out.println("        Press [4] to search a existing record                            ");
                 System.out.println("        [0] === Back to the past module                                  ");
                 System.out.println("                                                                         ");
                 System.out.println("+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=");
@@ -38,14 +38,19 @@ public class Selection {
                 else if(ch.equals("2")){
                     
                    
-                    over.getSearch();
+                    over.getNew(); // show new created psa birth certificate
                    
                     
                 }
                 else if(ch.equals("3")){
                    
-                    over.getShowList();
+                    over.getShowList(); // show the list of psa birth certificate using hashmap
                     
+                }
+                else if (ch.equals("4")){
+                    
+                      over.getSearch(); // search a certain record the using for loop
+                
                 }
                 else if(ch.equals("0")){
                 
