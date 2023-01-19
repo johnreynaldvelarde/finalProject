@@ -125,13 +125,23 @@ public class Overall_Information {
         ArrayList record = map.get(key);
         if(record!=null) {
             found = true;
-            System.out.println("Record found ");
+            System.out.println("");
+            System.out.println("-------------------------------------------------------------------------");
+            System.out.println("                            RECORD FOUND                                 ");
+            System.out.println("-------------------------------------------------------------------------");
+            System.out.println("");
             System.out.println("First Name " + record.get(1));
             System.out.println("Middle Name " + record.get(2));
             System.out.println("Last Name " + record.get(0));
         }
         else{
-             System.out.println("Record not found.");
+            
+            System.out.println("");
+            System.out.println("-------------------------------------------------------------------------");
+            System.out.println("                          RECORD NOT FOUND                               ");
+            System.out.println("-------------------------------------------------------------------------");
+            System.out.println("");
+            
         }
         
     } 
