@@ -233,5 +233,93 @@ public class Data {
     public void setmLast(String mLast) {
         this.mLast = mLast;
     }
+
+    public String getmCitizenship() {
+        return mCitizenship;
+    }
+
+    public String getmReligion() {
+        return mReligion;
+    }
+
+    public int getAlive() {
+        return alive;
+    }
+
+    public int getLiving() {
+        return living;
+    }
+
+    public int getDead() {
+        return dead;
+    }
+
+    public String getmOccupation() {
+        return mOccupation;
+    }
+
+    public int getMotherAge() {
+        return motherAge;
+    }
+
+    public String getHouseNo() {
+        return houseNo;
+    }
+
+    public String getmStreet() {
+        return mStreet;
+    }
+
+    public String getmCityMuni() {
+        return mCityMuni;
+    }
+
+    public String getmProvince() {
+        return mProvince;
+    }
+
+    public void setmCitizenship(String mCitizenship) {
+        this.mCitizenship = mCitizenship;
+    }
+
+    public void setmReligion(String mReligion) {
+        this.mReligion = mReligion;
+    }
+
+    public void setAlive(int alive) {
+        this.alive = alive;
+    }
+
+    public void setLiving(int living) {
+        this.living = living;
+    }
+
+    public void setDead(int dead) {
+        this.dead = dead;
+    }
+
+    public void setmOccupation(String mOccupation) {
+        this.mOccupation = mOccupation;
+    }
+
+    public void setMotherAge(int motherAge) {
+        this.motherAge = motherAge;
+    }
+
+    public void setHouseNo(String houseNo) {
+        this.houseNo = houseNo;
+    }
+
+    public void setmStreet(String mStreet) {
+        this.mStreet = mStreet;
+    }
+
+    public void setmCityMuni(String mCityMuni) {
+        this.mCityMuni = mCityMuni;
+    }
+
+    public void setmProvince(String mProvince) {
+        this.mProvince = mProvince;
+    }
     
 }

@@ -597,19 +597,214 @@ public class Overall_Information {
         
         // mother citizenship
         
+        do{
+            System.out.println("");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("\t|                          7. CITIZENSHIP                                 |\t");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("");
+            System.out.print("\tEnter Citizenship: ");
+            d.setmCitizenship(sc.nextLine());
+            
+            if(d.getmCitizenship().isEmpty() || d.getmCitizenship().equals("")){
+                
+                System.out.println("");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("\t|       Please, don't input space or enter only in names... Thank you     |\t");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("");
+                
+                answer01 = "1";
+            }
+            else{
+                
+                askUserAgain();
+                System.out.print("\tEnter: ");
+                answer01 = sc.nextLine();
+            }
+        
+        }while(answer01.equals("1"));
+        
         // mother religion
         
+          
+        do{
+            System.out.println("");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("\t|                              8. RELIGION                                |\t");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("");
+            System.out.print("\tEnter Religion: ");
+            d.setmReligion(sc.nextLine());
+            
+            if(d.getmReligion().isEmpty() || d.getmReligion().equals("")){
+                
+                System.out.println("");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("\t|       Please, don't input space or enter only in names... Thank you     |\t");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("");
+                
+                answer01 = "1";
+            }
+            else{
+                
+                askUserAgain();
+                System.out.print("\tEnter: ");
+                answer01 = sc.nextLine();
+            }
+        
+        }while(answer01.equals("1"));
+        
         // mother A.total number of children  born alive
+        do{
+                System.out.println("\t");
+                System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+                System.out.println("\t|                 9. A TOTAL NUMBER OF CHILDREN BORN ALIVE                |\t");
+                System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t"); 
+                System.out.println("\t");
+                System.out.print("\tEnter the total: ");
+               
+                try{
+                      int alive = Integer.parseInt(sc.nextLine());
+                      d.setAlive(alive);
+                      answer01 = "0";
+                      askUserAgain();
+                      System.out.print("\tEnter: ");
+                      answer01 = sc.nextLine();
+                      
+                }catch(NumberFormatException e){
+                    
+                      System.out.println("");
+                      System.out.println("\t---------------------------------------------------------------------------\t");
+                      System.out.println("\t|               Please, wrong input, Try Again!!! ... Thank you           |\t");
+                      System.out.println("\t---------------------------------------------------------------------------\t");
+                      System.out.println("");
+                      answer01 = "1";
+                }
+            
+        }while(answer01.equals("1"));
         
         // mother B. No of children still living including this birth
+        do{
+                System.out.println("\t");
+                System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+                System.out.println("\t|           B.  NO OF CHILDREN STILL LIVING INCLUDING THIS BIRTH          |\t");
+                System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t"); 
+                System.out.println("\t");
+                System.out.print("\tEnter the total: ");
+               
+                try{
+                      int living = Integer.parseInt(sc.nextLine());
+                      d.setLiving(living);
+                      answer01 = "0";
+                      askUserAgain();
+                      System.out.print("\tEnter: ");
+                      answer01 = sc.nextLine();
+                      
+                }catch(NumberFormatException e){
+                    
+                      System.out.println("");
+                      System.out.println("\t---------------------------------------------------------------------------\t");
+                      System.out.println("\t|               Please, wrong input, Try Again!!! ... Thank you           |\t");
+                      System.out.println("\t---------------------------------------------------------------------------\t");
+                      System.out.println("");
+                      answer01 = "1";
+                }
+            
+        }while(answer01.equals("1"));
         
         // mother C. No of children born alive but are now dead
+         do{
+                System.out.println("\t");
+                System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+                System.out.println("\t|             C.  NO OF CHILDREN BORN ALIVE BUT ARE NOW DEAD              |\t");
+                System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t"); 
+                System.out.println("\t");
+                System.out.print("\tEnter the total: ");
+               
+                try{
+                      int dead = Integer.parseInt(sc.nextLine());
+                      d.setDead(dead);
+                      answer01 = "0";
+                      askUserAgain();
+                      System.out.print("\tEnter: ");
+                      answer01 = sc.nextLine();
+                      
+                }catch(NumberFormatException e){
+                    
+                      System.out.println("");
+                      System.out.println("\t---------------------------------------------------------------------------\t");
+                      System.out.println("\t|               Please, wrong input, Try Again!!! ... Thank you           |\t");
+                      System.out.println("\t---------------------------------------------------------------------------\t");
+                      System.out.println("");
+                      answer01 = "1";
+                }
+            
+        }while(answer01.equals("1"));
         
         // mother occupation
+        do{
+            System.out.println("");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("\t|                             10. OCCUPATION                              |\t");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("");
+            System.out.print("\tEnter Occupation (Leave blank if none): ");
+            d.setmReligion(sc.nextLine());
+            
+            if(d.getmReligion().isEmpty() || d.getmReligion().equals("")){
+                
+                d.setmReligion("None");
+                askUserAgain();
+                System.out.print("\tEnter: ");
+                answer01 = sc.nextLine();
+            }
+            else{
+                
+                askUserAgain();
+                System.out.print("\tEnter: ");
+                answer01 = sc.nextLine();
+            }
+        
+        }while(answer01.equals("1"));
         
         // mother age
+         do{
+                System.out.println("\t");
+                System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+                System.out.println("\t|                     11. AGE AT THE TIME OF THIS BIRTH                   |\t");
+                System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t"); 
+                System.out.println("\t");
+                System.out.print("\tEnter age: ");
+               
+                try{
+                      int age = Integer.parseInt(sc.nextLine());
+                      d.setMotherAge(age);
+                      answer01 = "0";
+                      askUserAgain();
+                      System.out.print("\tEnter: ");
+                      answer01 = sc.nextLine();
+                      
+                }catch(NumberFormatException e){
+                    
+                      System.out.println("");
+                      System.out.println("\t---------------------------------------------------------------------------\t");
+                      System.out.println("\t|               Please, wrong input, Try Again!!! ... Thank you           |\t");
+                      System.out.println("\t---------------------------------------------------------------------------\t");
+                      System.out.println("");
+                      answer01 = "1";
+                }
+            
+        }while(answer01.equals("1"));
         
         // mother residence
+        
+        
+        
+        
+        
+        
         
         // === father part == 
         // father name info
