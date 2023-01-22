@@ -9,6 +9,8 @@ public class Data {
      
     
     private int number;
+    private String frontProvince;
+    private String frontCityMuni;
 
     // child  info
     private String cName;
@@ -38,8 +40,7 @@ public class Data {
     private int dead;
     private String mOccupation;
     private int motherAge;
-    private String houseNo;
-    private String mStreet;
+    private String mhouseNo;
     private String mCityMuni;
     private String mProvince;
     
@@ -56,8 +57,8 @@ public class Data {
     // Other Information
 
     // 18 date and place of marriage
-    private String dateOfMarriage;
-    private String placeOfMarriage;
+    //private String dateOfMarriage;
+    private String placeanddateOfMarriage;
 
         // 19a attendant
     private String attendant;
@@ -261,15 +262,7 @@ public class Data {
     public int getMotherAge() {
         return motherAge;
     }
-
-    public String getHouseNo() {
-        return houseNo;
-    }
-
-    public String getmStreet() {
-        return mStreet;
-    }
-
+   
     public String getmCityMuni() {
         return mCityMuni;
     }
@@ -306,20 +299,140 @@ public class Data {
         this.motherAge = motherAge;
     }
 
-    public void setHouseNo(String houseNo) {
-        this.houseNo = houseNo;
-    }
-
-    public void setmStreet(String mStreet) {
-        this.mStreet = mStreet;
-    }
-
     public void setmCityMuni(String mCityMuni) {
         this.mCityMuni = mCityMuni;
     }
 
     public void setmProvince(String mProvince) {
         this.mProvince = mProvince;
+    }
+
+    public String getMhouseNo() {
+        return mhouseNo;
+    }
+
+    public void setMhouseNo(String mhouseNo) {
+        this.mhouseNo = mhouseNo;
+    }
+
+    public String getFrontProvince() {
+        return frontProvince;
+    }
+
+    public String getFrontCityMuni() {
+        return frontCityMuni;
+    }
+
+    public void setFrontProvince(String frontProvince) {
+        this.frontProvince = frontProvince;
+    }
+
+    public void setFrontCityMuni(String frontCityMuni) {
+        this.frontCityMuni = frontCityMuni;
+    }
+
+    public String getfName() {
+        return fName;
+    }
+
+    public String getfMiddle() {
+        return fMiddle;
+    }
+
+    public String getfLast() {
+        return fLast;
+    }
+
+    public String getfCitizenship() {
+        return fCitizenship;
+    }
+
+    public String getfReligion() {
+        return fReligion;
+    }
+
+    public String getfOccupation() {
+        return fOccupation;
+    }
+
+    public int getFatherAge() {
+        return fatherAge;
+    }
+
+    public void setfName(String fName) {
+        this.fName = fName;
+    }
+
+    public void setfMiddle(String fMiddle) {
+        this.fMiddle = fMiddle;
+    }
+
+    public void setfLast(String fLast) {
+        this.fLast = fLast;
+    }
+
+    public void setfCitizenship(String fCitizenship) {
+        this.fCitizenship = fCitizenship;
+    }
+
+    public void setfReligion(String fReligion) {
+        this.fReligion = fReligion;
+    }
+
+    public void setfOccupation(String fOccupation) {
+        this.fOccupation = fOccupation;
+    }
+
+    public void setFatherAge(int fatherAge) {
+        this.fatherAge = fatherAge;
+    }
+
+    public String getPlaceanddateOfMarriage() {
+        return placeanddateOfMarriage;
+    }
+
+    public void setPlaceanddateOfMarriage(String placeanddateOfMarriage) {
+        this.placeanddateOfMarriage = placeanddateOfMarriage;
+    }
+
+    public String getAttendant() {
+        return attendant;
+    }
+
+    public void setAttendant(String attendant) {
+        this.attendant = attendant;
+    }
+
+    public String getNamePrint() {
+        return namePrint;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getTitlePosition() {
+        return titlePosition;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setNamePrint(String namePrint) {
+        this.namePrint = namePrint;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setTitlePosition(String titlePosition) {
+        this.titlePosition = titlePosition;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
     
 }

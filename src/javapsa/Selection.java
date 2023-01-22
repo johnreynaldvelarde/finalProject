@@ -55,7 +55,7 @@ public class Selection {
                 else if(ch.equals("0")){
                     
                     System.out.println("");
-                    System.out.println("    ~o~o~o~o~o Thank you for your time and cooperation ~o~o~o~o~o    ");
+                    System.out.println("\t        ~o~o~o~o~o Thank you for your time and cooperation ~o~o~o~o~o      \t");
                     break;
                 
                 }

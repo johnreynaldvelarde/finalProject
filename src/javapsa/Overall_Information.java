@@ -71,21 +71,21 @@ public class Overall_Information {
          System.out.println("");
          System.out.println("");
          System.out.println("");
-         System.out.println("\t=========================================================================\t");
-         System.out.println("                          CERTIFICATE OF LIVE BIRTH                        \t");
-         System.out.println("\t=========================================================================\t");
-         System.out.println("\t Registry No: "+d.getNumber()                                             );
-         System.out.println("\t=========================================================================\t");
-         System.out.println("\t-------------------------------------------------------------------------\t");
-         System.out.println("\t 1. CHILD NAME       (First)            (Middle)            (Last)       \t");
-         System.out.println("\t-------------------------------------------------------------------------\t");
+        // System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+         System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");
+         System.out.println("\t                         CERTIFICATE OF LIVE BIRTH                           \t");
+         System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");
+         System.out.println("\t Province: "+d.getFrontProvince() +"    \t\t\t  Registry No. "  + d.getNumber());
+         System.out.println("\t City/Municipality: "+d.getFrontCityMuni()+"                                 \t");
+         System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");                                                             
+         System.out.println("\t  1. CHILD NAME       (First)            (Middle)            (Last)       \t");
+         System.out.println("\t");
          System.out.println("\t                  "+d.getcName()+"           "+d.getcMiddle()+"              "+d.getcLast()   );
-         System.out.println("\t--------------------------------------------------------------------------\t");
-         System.out.println("\t 2. SEX " +d.getChildSex() +""                                  );
-         System.out.println("\t--------------------------------------------------------------------------\t");
-         System.out.println("\t 3. Day " +d.getDay()+d.getMonth()+d.getYear()+"                         ");
-         System.out.println("\t=========================================================================");
-    
+         System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");   
+         System.out.println("\t  2. SEX: " +d.getChildSex() + "\t\t 3. DATE OF BIRTH\t(day)\t(month)\t(year)"    );
+         System.out.println("\t");
+         System.out.println("\t                                       \t"+"\t"+ d.getDay()+"\t"+ d.getMonth()+"\t"+ d.getYear());
+         System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");   
     }
     
      // search a certain record  
@@ -374,7 +374,7 @@ public class Overall_Information {
                 else{
                     System.out.println("");
                     System.out.println("\t---------------------------------------------------------------------------\t");
-                    System.out.println("\t|                   Plss only selected the avaiable number                |\t");
+                    System.out.println("\t|                   Plss only select the avaiable number                  |\t");
                     System.out.println("\t---------------------------------------------------------------------------\t");
                     System.out.println("");
                     answer01 = "1";
@@ -450,7 +450,7 @@ public class Overall_Information {
                     
                     System.out.println("");
                     System.out.println("\t---------------------------------------------------------------------------\t");
-                    System.out.println("\t|                   Plss only selected the avaiable number                |\t");
+                    System.out.println("\t|                   Plss only select the avaiable number                  |\t");
                     System.out.println("\t---------------------------------------------------------------------------\t");
                     System.out.println("");
                     answer01 = "1";
@@ -516,7 +516,7 @@ public class Overall_Information {
                     
                     System.out.println("");
                     System.out.println("\t---------------------------------------------------------------------------\t");
-                    System.out.println("\t|                   Plss only selected the avaiable number                |\t");
+                    System.out.println("\t|                   Plss only select the avaiable number                  |\t");
                     System.out.println("\t---------------------------------------------------------------------------\t");
                     System.out.println("");
                     answer01 = "1";
@@ -751,9 +751,9 @@ public class Overall_Information {
             System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
             System.out.println("");
             System.out.print("\tEnter Occupation (Leave blank if none): ");
-            d.setmReligion(sc.nextLine());
+            d.setmOccupation(sc.nextLine());
             
-            if(d.getmReligion().isEmpty() || d.getmReligion().equals("")){
+            if(d.getmOccupation().isEmpty() || d.getmOccupation().equals("")){
                 
                 d.setmReligion("None");
                 askUserAgain();
@@ -799,23 +799,326 @@ public class Overall_Information {
         }while(answer01.equals("1"));
         
         // mother residence
-        
-        
-        
-        
-        
-        
+        do {
+            System.out.println("\t");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("\t|                            12. RESIDENCE                                |\t");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            sc.nextLine();
+            System.out.println("");
+            System.out.print("\tEnter ( House No, Street, Barangay): ");
+            d.setMhouseNo(sc.nextLine());
+           
+            System.out.print("\tEnter City/Municipality: ");
+            d.setmCityMuni(sc.nextLine());
+         
+            System.out.print("\tEnter Province: ");
+            d.setmProvince(sc.nextLine());
+           
+            //checks if the user tried to enter or space only
+            if ( d.getMhouseNo().isEmpty() || d.getMhouseNo().equals(" ") || d.getmCityMuni().isEmpty() || d.getmCityMuni().equals(" ")
+                || d.getmProvince().isEmpty() || d.getmProvince().equals(" ")) 
+            {
+                System.out.println("");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("\t|      Please, don't input space or enter only in names... Thank you      |\t");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("");
+                answer01 = "1";
+                
+            } else {
+                askUserAgain();
+                System.out.print("\tEnter: ");
+                answer01 = sc.nextLine();
+            }
+        } while(answer01.equals("1")); // propmts user again if the input is 1
         
         // === father part == 
         // father name info
+            
+        do{
+            System.out.println("");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("\t|                            13. FATHER NAME                              |\t");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("");
+            
+            System.out.print("\tEnter First Name: ");
+            d.setfName(sc.nextLine());
+            System.out.print("\tEnter Middle Name: ");
+            d.setfMiddle(sc.nextLine());
+            System.out.print("\tEnter Last Name: ");
+            d.setfLast(sc.nextLine());
+            
+             //checks if the user tried to enter or space only
+            if(d.getfName().isEmpty() || d.getfName().equals(" ") ||  d.getfLast().isEmpty() || d.getfLast().equals(" ")) 
+            {
+                System.out.println("");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("\t|       Please, don't input space or enter only in names... Thank you     |\t");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("");
+                
+                answer01 = "1";
+                
+            } else {
+                askUserAgain();
+                System.out.print("\tEnter: ");
+                answer01 = sc.nextLine();
+            }
+        
+        }while(answer01.equals("1"));
+        
+        // father citizenship
+        do{
+            System.out.println("");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("\t|                            14. CITIZENSHIP                              |\t");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("");
+            System.out.print("\tEnter Citizenship: ");
+            d.setfCitizenship(sc.nextLine());
+            
+            if(d.getfCitizenship().isEmpty() || d.getfCitizenship().equals("")){
+                
+                System.out.println("");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("\t|       Please, don't input space or enter only in names... Thank you     |\t");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("");
+                
+                answer01 = "1";
+            }
+            else{
+                
+                askUserAgain();
+                System.out.print("\tEnter: ");
+                answer01 = sc.nextLine();
+            }
+        
+        }while(answer01.equals("1"));
+        
+        // father religion
+        do{
+            System.out.println("");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("\t|                             15. RELIGION                                |\t");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("");
+            System.out.print("\tEnter Religion: ");
+            d.setfReligion(sc.nextLine());
+            
+            if(d.getfReligion().isEmpty() || d.getfReligion().equals("")){
+                
+                System.out.println("");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("\t|       Please, don't input space or enter only in names... Thank you     |\t");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("");
+                
+                answer01 = "1";
+            }
+            else{
+                
+                askUserAgain();
+                System.out.print("\tEnter: ");
+                answer01 = sc.nextLine();
+            }
+        
+        }while(answer01.equals("1"));
+        
+        // father occupation
+          do{
+            System.out.println("");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("\t|                            16. OCCUPATION                               |\t");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("");
+            System.out.print("\tEnter Occupation (Leave blank if none): ");
+            d.setfOccupation(sc.nextLine());
+            
+            if(d.getfOccupation().isEmpty() || d.getfOccupation().equals("")){
+                
+                d.setmReligion("None");
+                askUserAgain();
+                System.out.print("\tEnter: ");
+                answer01 = sc.nextLine();
+            }
+            else{
+                
+                askUserAgain();
+                System.out.print("\tEnter: ");
+                answer01 = sc.nextLine();
+            }
+        
+        }while(answer01.equals("1"));
+        
+        // father age
+         do{
+                System.out.println("\t");
+                System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+                System.out.println("\t|                     17. AGE AT THE TIME OF THIS BIRTH                   |\t");
+                System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t"); 
+                System.out.println("\t");
+                System.out.print("\tEnter age: ");
+               
+                try{
+                      int age = Integer.parseInt(sc.nextLine());
+                      d.setFatherAge(age);
+                      answer01 = "0";
+                      askUserAgain();
+                      System.out.print("\tEnter: ");
+                      answer01 = sc.nextLine();
+                      
+                }catch(NumberFormatException e){
+                    
+                      System.out.println("");
+                      System.out.println("\t---------------------------------------------------------------------------\t");
+                      System.out.println("\t|               Please, wrong input, Try Again!!! ... Thank you           |\t");
+                      System.out.println("\t---------------------------------------------------------------------------\t");
+                      System.out.println("");
+                      answer01 = "1";
+                }
+            
+        }while(answer01.equals("1"));
         
         
         // == another info part ==
+        // 18 part
+        do{
+                System.out.println("\t");
+                System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+                System.out.println("\t|                18. DATE AND PLACE OF MARRIAGE OF THE PARENTS            |\t");
+                System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t"); 
+                System.out.println("\t");
+                System.out.print("\tEnter date and place: ");
+                d.setPlaceanddateOfMarriage(sc.nextLine());
                 
-                
-                
+                if(d.getPlaceanddateOfMarriage().isEmpty() || d.getPlaceanddateOfMarriage().equals("")){
+                    
+                      System.out.println("");
+                      System.out.println("\t---------------------------------------------------------------------------\t");
+                      System.out.println("\t|               Please, wrong input, Try Again!!! ... Thank you           |\t");
+                      System.out.println("\t---------------------------------------------------------------------------\t");
+                      System.out.println("");
+                      answer01 = "1";
+                }
+                else{
+                    
+                     askUserAgain();
+                     System.out.print("\tEnter: ");
+                     answer01 = sc.nextLine();
+                }
         
         
+        }while(answer01.equals("1"));
+                
+        // 19 part
+        
+        do{
+                System.out.println("\t");
+                System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+                System.out.println("\t|                          19. A.  ATTENDANT                              |\t");
+                System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t"); 
+                System.out.println("\t");
+                System.out.println("\t+-------------------------------------------------------------------------+\t");
+                System.out.println("\t|                         [1] --> Physician                               |\t");
+                System.out.println("\t|                         [2] --> Nurse                                   |\t");
+                System.out.println("\t|                         [3] --> Midwife                                 |\t");
+                System.out.println("\t|                         [4] --> Hilot(Traditonal Midwife)               |\t");
+                System.out.println("\t                          [5] --> Others, Specify                         |\t");
+                System.out.println("\t+-------------------------------------------------------------------------+\t");
+                System.out.println("");
+                System.out.print("\tPress a number: ");
+                ch = sc.nextLine();
+                
+                if(ch.equalsIgnoreCase("1")){
+                    
+                    d.setAttendant("Physician");
+                    answer01 = "0";
+                    askUserAgain();
+                    System.out.print("\tEnter: ");
+                    answer01 = sc.nextLine();
+                }
+                else if(ch.equalsIgnoreCase("2")){
+                    
+                    d.setAttendant("Nurse");
+                    answer01 = "0";
+                    askUserAgain();
+                    System.out.print("\tEnter: ");
+                    answer01 = sc.nextLine();
+                    
+                }
+                else if(ch.equalsIgnoreCase("3")){
+                    
+                    d.setAttendant("Midwife");
+                    answer01 = "0";
+                    askUserAgain();
+                    System.out.print("\tEnter: ");
+                    answer01 = sc.nextLine();
+                    
+                }
+                else if(ch.equalsIgnoreCase("4")){
+                    
+                    d.setAttendant("Hilot(Traditonal Midwife)");
+                    answer01 = "0";
+                    askUserAgain();
+                    System.out.print("\tEnter: ");
+                    answer01 = sc.nextLine();
+                    
+                }
+                else if(ch.equalsIgnoreCase("5")){
+                    
+                    System.out.print("\tSpecify: ");
+                    d.setAttendant(sc.nextLine());
+                    answer01 = "0";
+                    askUserAgain();
+                    System.out.print("\tEnter: ");
+                    answer01 = sc.nextLine();
+                }
+                else{
+                    
+                    System.out.println("");
+                    System.out.println("\t---------------------------------------------------------------------------\t");
+                    System.out.println("\t|                   Plss only select the avaiable number                  |\t");
+                    System.out.println("\t---------------------------------------------------------------------------\t");
+                    System.out.println("");
+                    answer01 = "1";
+                }
+            
+        }while(answer01.equals("1"));
+        
+        // 20 part
+        
+        do{
+            System.out.println("");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("\t|                        B. CERTIFICATION OF BIRTH                        |\t");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("");
+            System.out.print("I hereby that i attended the birth of the child who  was born alive at () o clock am/pm on the date stated about: ");
+            timeAttend = sc.nextLine();
+            System.out.print("Enter Name in print (ALL CAPITAL): ");
+            attendName = sc.nextLine();
+            System.out.print("Enter Title or Positon: ");
+            attendTitle = sc.nextLine();
+            System.out.print("Enter Address: ");
+            attendAdress = sc.nextLine();
+            System.out.print("Enter Date: ");
+            attendDate = sc.nextLine();
+            
+            
+                     
+        
+        
+        }while(answer01.equals("1"));
+        
+        
+        // 21 part
+        
+        
+        // 22 part
+                
         
         
         
