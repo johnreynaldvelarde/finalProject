@@ -1097,15 +1097,15 @@ public class Overall_Information {
             System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
             System.out.println("");
             System.out.print("I hereby that i attended the birth of the child who  was born alive at () o clock am/pm on the date stated about: ");
-            timeAttend = sc.nextLine();
+           // = sc.nextLine();
             System.out.print("Enter Name in print (ALL CAPITAL): ");
-            attendName = sc.nextLine();
+            d.setNamePrint(sc.nextLine());
             System.out.print("Enter Title or Positon: ");
-            attendTitle = sc.nextLine();
-            System.out.print("Enter Address: ");
-            attendAdress = sc.nextLine();
-            System.out.print("Enter Date: ");
-            attendDate = sc.nextLine();
+           // d.settit
+           // System.out.print("Enter Address: ");
+           // attendAdress = sc.nextLine();
+           // System.out.print("Enter Date: ");
+            //attendDate = sc.nextLine();
             
             
                      
