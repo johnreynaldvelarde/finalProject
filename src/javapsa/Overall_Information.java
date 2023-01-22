@@ -158,15 +158,19 @@ public class Overall_Information {
      // search a certain record  
      public void getSearch(){
         
+        String answer01 = "";
         boolean found = false;
-        System.out.println("");
-        System.out.print("\tEnter the registry number: ");
-        String search = sc.nextLine();
         
-        int key = Integer.parseInt(search);
-        
-        ArrayList record = map.get(key);
-        if(record!=null) {
+        do{
+            System.out.println("");
+            System.out.print("\tEnter the registry number: ");
+            try{
+            
+            int key = Integer.parseInt(sc.nextLine());
+             
+            ArrayList record = map.get(key);
+            
+            if(record!=null) {
             found = true;
             
             System.out.println("\t");
@@ -262,7 +266,7 @@ public class Overall_Information {
             System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");
             System.out.println("\t");
             System.out.println("\t");
-
+            
        
             
         }
@@ -271,7 +275,19 @@ public class Overall_Information {
              System.out.println("\t      ~o~o~o~o~o  Ooops!! The Record has not been found   ~o~o~o~o~o       \t");
              System.out.println("");
         }
-        
+             //answer01 = sc.nextLine();
+             
+            }catch(NumberFormatException e){
+            
+                      System.out.println("");
+                      System.out.println("\t---------------------------------------------------------------------------\t");
+                      System.out.println("\t|               Please, wrong input, Try Again!!! ... Thank you           |\t");
+                      System.out.println("\t---------------------------------------------------------------------------\t");
+                      System.out.println("");
+                      answer01 = "1";
+            }
+      
+        }while(answer01.equals("1"));
     }
      
      
@@ -530,7 +546,7 @@ public class Overall_Information {
                 else{
                     System.out.println("");
                     System.out.println("\t---------------------------------------------------------------------------\t");
-                    System.out.println("\t|                   Plss only select the avaiable number                  |\t");
+                    System.out.println("\t|                  Plss only select the available number                  |\t");
                     System.out.println("\t---------------------------------------------------------------------------\t");
                     System.out.println("");
                     answer01 = "1";
@@ -606,7 +622,7 @@ public class Overall_Information {
                     
                     System.out.println("");
                     System.out.println("\t---------------------------------------------------------------------------\t");
-                    System.out.println("\t|                   Plss only select the avaiable number                  |\t");
+                    System.out.println("\t|                  Plss only select the available number                  |\t");
                     System.out.println("\t---------------------------------------------------------------------------\t");
                     System.out.println("");
                     answer01 = "1";
@@ -672,7 +688,7 @@ public class Overall_Information {
                     
                     System.out.println("");
                     System.out.println("\t---------------------------------------------------------------------------\t");
-                    System.out.println("\t|                   Plss only select the avaiable number                  |\t");
+                    System.out.println("\t|                  Plss only select the available number                  |\t");
                     System.out.println("\t---------------------------------------------------------------------------\t");
                     System.out.println("");
                     answer01 = "1";
@@ -1237,7 +1253,7 @@ public class Overall_Information {
                     
                     System.out.println("");
                     System.out.println("\t---------------------------------------------------------------------------\t");
-                    System.out.println("\t|                   Plss only select the avaiable number                  |\t");
+                    System.out.println("\t|                  Plss only select the available number                  |\t");
                     System.out.println("\t---------------------------------------------------------------------------\t");
                     System.out.println("");
                     answer01 = "1";
