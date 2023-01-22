@@ -62,7 +62,6 @@ public class Overall_Information {
          System.out.println("");
          System.out.println("");
          System.out.println("");
-        // System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
          System.out.println("");
          System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");
          System.out.println("\t                         CERTIFICATE OF LIVE BIRTH                           \t");
@@ -73,8 +72,8 @@ public class Overall_Information {
          System.out.println("\t                            CHILD INFORMATION                                \t");
          System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");
          System.out.println("\t  1. CHILD NAME: \t(First) \t"+ d.getcName()                                    );
-         System.out.println("\t                 \t(Middle) \t"+ d.getcName()                                   );
-         System.out.println("\t                 \t(Last) \t\t"+ d.getcName()                                   );
+         System.out.println("\t                 \t(Middle) \t"+ d.getcMiddle()                                 );
+         System.out.println("\t                 \t(Last) \t\t"+ d.getcLast()                                   );
          System.out.println("\t---------------------------------------------------------------------------"    );
          System.out.println("\t  2. SEX: \t"+ d.getChildSex()                                                  );
          System.out.println("\t---------------------------------------------------------------------------"    );
@@ -94,8 +93,8 @@ public class Overall_Information {
          System.out.println("\t                            MOTHER INFORMATION                               \t");
          System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");
          System.out.println("\t  6. MOTHER NAME: \t(First) \t"+ d.getmName()                                   );
-         System.out.println("\t                  \t(Middle) \t"+ d.getmName()                                  );
-         System.out.println("\t                  \t(Last) \t\t"+ d.getmName()                                  );
+         System.out.println("\t                  \t(Middle) \t"+ d.getmMiddle()                                  );
+         System.out.println("\t                  \t(Last) \t\t"+ d.getmLast()                                  );
          System.out.println("\t---------------------------------------------------------------------------"    );
          System.out.println("\t  7. CITIZENSHIP: \t"+ d.getmCitizenship()                                      );
          System.out.println("\t  8. RELIGION:    \t"+ d.getmReligion()                                         );
@@ -114,8 +113,8 @@ public class Overall_Information {
          System.out.println("\t                            FATHER INFORMATION                               \t");
          System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");
          System.out.println("\t  13. FATHER NAME: \t(First) \t"+ d.getfName()                                  );
-         System.out.println("\t                   \t(Middle) \t"+ d.getfName()                                 );
-         System.out.println("\t                   \t(Last) \t\t"+ d.getfName()                                 );
+         System.out.println("\t                   \t(Middle) \t"+ d.getfMiddle()                               );
+         System.out.println("\t                   \t(Last) \t\t"+ d.getfLast()                                 );
          System.out.println("\t---------------------------------------------------------------------------"    );
          System.out.println("\t  14. CITIZENSHIP:                    \t"+ d.getfCitizenship()                  );
          System.out.println("\t  15. RELIGION:                       \t"+ d.getfReligion()                     );
@@ -170,14 +169,102 @@ public class Overall_Information {
         if(record!=null) {
             found = true;
             
-            System.out.println("");
+            System.out.println("\t");
             System.out.println("\t    ~o~o~o~o~o Congratulations!! You're Record has been found ~o~o~o~o~o   \t");
-            System.out.println("");
-            System.out.println("="+"=================================================");
-            System.out.println("|  \tFirst Name         :       " + record.get(1) + " \t |");
-            System.out.println("|  \tMiddle Name        :       " + record.get(2) + "  \t |");
-            System.out.println("|  \tLast Name          :       " + record.get(0) + " \t |");
-            System.out.println("="+"=================================================");
+            System.out.println("\t");
+            System.out.println("\t");
+            System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");
+            System.out.println("\t                         CERTIFICATE OF LIVE BIRTH                           \t");
+            System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");
+            System.out.println("\t Province: "+d.getFrontProvince() +"    \t\t\t  Registry No. "  + key           );
+            System.out.println("\t City/Municipality: "+d.getFrontCityMuni()+"                                 \t");
+            System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");
+            System.out.println("\t                            CHILD INFORMATION                                \t");
+            System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");
+            System.out.println("\t  1. CHILD NAME: \t(First) \t"+ record.get(1)                                   );
+            System.out.println("\t                 \t(Middle) \t"+ record.get(2)                                  );
+            System.out.println("\t                 \t(Last) \t\t"+ record.get(0)                                  );
+            System.out.println("\t---------------------------------------------------------------------------"    );
+            System.out.println("\t  2. SEX: \t"+ record.get(3)                                                    );
+            System.out.println("\t---------------------------------------------------------------------------"    );
+            System.out.println("\t  3. DATE OF BIRTH:  \t(Day) \t\t"+ record.get(4)                               );
+            System.out.println("\t                     \t(Month) \t"+ record.get(5)                               );
+            System.out.println("\t                     \t(Year) \t\t"+ record.get(6)                              );
+            System.out.println("\t---------------------------------------------------------------------------"    );
+            System.out.println("\t  4. PLACE OF BIRTH: \t(Name of Hospital) \t"+record.get(7)                     );
+            System.out.println("\t                     \t(City/Municipality)\t"+record.get(8)                     );
+            System.out.println("\t                     \t(Province)         \t"+record.get(9)                     );
+            System.out.println("\t---------------------------------------------------------------------------"    );
+            System.out.println("\t  5. A. TYPE OF BIRTH:                \t\t"+record.get(10)                      );
+            System.out.println("\t     B. IF MULTIPLE BIRTH, CHILD WAS: \t\t"+record.get(11)                      );
+            System.out.println("\t     C. BIRTH ORDER:                  \t\t"+record.get(12)                      );
+            System.out.println("\t     D. WEIGHT AT BIRTH:              \t\t"+record.get(13)                      );
+            System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");
+            System.out.println("\t                            MOTHER INFORMATION                               \t");
+            System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");
+            System.out.println("\t  6. MOTHER NAME: \t(First)  \t"+ record.get(14)                                );
+            System.out.println("\t                  \t(Middle) \t"+ record.get(15)                                );
+            System.out.println("\t                  \t(Last) \t\t"+ record.get(16)                                );
+            System.out.println("\t---------------------------------------------------------------------------"    );
+            System.out.println("\t  7. CITIZENSHIP: \t"+ record.get(17)                                           );
+            System.out.println("\t  8. RELIGION:    \t"+ record.get(18)                                           );
+            System.out.println("\t---------------------------------------------------------------------------"    );
+            System.out.println("\t  9. A. TOTAL NUMBER OF CHILDBORN ALIVE:                  \t"+record.get(19)    );
+            System.out.println("\t     B. NO OF CHILDREN STILL LIVING INCLUDING THIS BRITH: \t"+record.get(20)    );
+            System.out.println("\t     C. NO OF CHILDREN BORN ALIVE BUT ARE NOT DEAD:       \t"+record.get(21)    );
+            System.out.println("\t---------------------------------------------------------------------------"    );               
+            System.out.println("\t  10. OCCUPATION:                     \t"+ record.get(22)                       );
+            System.out.println("\t  11. AGE AT THE TIME OF THIS BIRTH:  \t"+ record.get(23)                       );
+            System.out.println("\t---------------------------------------------------------------------------"    );
+            System.out.println("\t  12. RESIDENCE:     \t(House No)         \t"+ record.get(24)                   );
+            System.out.println("\t                     \t(City/Municipality)\t"+ record.get(25)                   );
+            System.out.println("\t                     \t(Province)         \t"+ record.get(26)                   );
+            System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");
+            System.out.println("\t                            FATHER INFORMATION                               \t");
+            System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");
+            System.out.println("\t  13. FATHER NAME: \t(First)  \t"+ record.get(27)                               );
+            System.out.println("\t                   \t(Middle) \t"+ record.get(28)                               );
+            System.out.println("\t                   \t(Last) \t\t"+ record.get(29)                               );
+            System.out.println("\t---------------------------------------------------------------------------"    );
+            System.out.println("\t  14. CITIZENSHIP:                    \t"+ record.get(30)                       );
+            System.out.println("\t  15. RELIGION:                       \t"+ record.get(31)                       );
+            System.out.println("\t  16. OCCUPATION:                     \t"+ record.get(32)                       );
+            System.out.println("\t  17. AGE AT THE TIME OF THIS BIRTH:  \t"+ record.get(33)                       );
+            System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");
+            System.out.println("\t                            ANOTHER INFORMATION                              \t");
+            System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");
+            System.out.println("\t  18. DATE AND PLACE OF                                                        ");  
+            System.out.println("\t      MARRIAGE OF THE PARENTS:  \t"+ record.get(34)                             );                                                 
+            System.out.println("\t  19. A. ATTENDANT:             \t"+ record.get(35)                             );
+            System.out.println("\t---------------------------------------------------------------------------"    );
+            System.out.println("\t      B. CERTIFICATION OF BIRTH:                                               ");
+            System.out.println("\t      I hereby that I attended the birth of the child who was born"             );
+            System.out.println("\t      alive at()   "+ record.get(36) +"  o clock am/pm on the date stated above");
+            System.out.println("\t                                                                               ");
+            System.out.println("\t      (Name in print)      \t"+record.get(37)                                   );
+            System.out.println("\t      (Title or Position)  \t"+record.get(38)                                   );
+            System.out.println("\t      (Address)            \t"+record.get(39)                                   );
+            System.out.println("\t      (Date)               \t"+record.get(40)                                   );
+            System.out.println("\t---------------------------------------------------------------------------"    );
+            System.out.println("\t  20. INFORMANT:  \t(Name in print)               \t"+ record.get(41)           );
+            System.out.println("\t                  \t(Relationship of the child)   \t"+ record.get(42)           );
+            System.out.println("\t                  \t(Address)                     \t"+ record.get(43)           );
+            System.out.println("\t                  \t(Date)                        \t"+ record.get(44)           );
+            System.out.println("\t---------------------------------------------------------------------------"    );
+            System.out.println("\t  21. PREPARED BY: \t(Name in print)       \t"+ record.get(45)                  );
+            System.out.println("\t                   \t(Title or Position)   \t"+ record.get(46)                  );
+            System.out.println("\t                   \t(Date)                \t"+ record.get(47)                  );
+            System.out.println("\t---------------------------------------------------------------------------"    );
+            System.out.println("\t  22. RECEIVED AT THE OFFICE OF CIVIL REGISTRAR :                              ");
+            System.out.println("\t                   \t(Name in print)       \t"+ record.get(48)                  );
+            System.out.println("\t                   \t(Title or Position)   \t"+ record.get(49)                  );
+            System.out.println("\t                   \t(Date)                \t"+ record.get(50)                  );
+            System.out.println("\t━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\t");
+            System.out.println("\t");
+            System.out.println("\t");
+
+       
+            
         }
         else{
              System.out.println("");
@@ -824,7 +911,7 @@ public class Overall_Information {
             
             if(d.getmOccupation().isEmpty() || d.getmOccupation().equals("")){
                 
-                d.setmReligion("None");
+                d.setmOccupation("None");
                 askUserAgain();
                 System.out.print("\tEnter: ");
                 answer01 = sc.nextLine();
@@ -1008,7 +1095,7 @@ public class Overall_Information {
             
             if(d.getfOccupation().isEmpty() || d.getfOccupation().equals("")){
                 
-                d.setmReligion("None");
+                d.setfOccupation("None");
                 askUserAgain();
                 System.out.print("\tEnter: ");
                 answer01 = sc.nextLine();
@@ -1319,12 +1406,13 @@ public class Overall_Information {
     public void getMap(){
     
        map.put(d.getNumber(), new ArrayList(Arrays.asList(d.getcLast(), d.getcName(), d.getcMiddle(), d.getChildSex(), d.getDay(), d.getMonth(),
-               d.getYear(), d.getTypeOfBirth(), d.getMultipleBirth(), d.getBirthOrder(), d.getBabyWeight(), d.getmName(), d.getmMiddle(),
-               d.getcLast(), d.getmCitizenship(), d.getmReligion(), d.getAlive(), d.getLiving(), d.getDead(), d.getmOccupation(), d.getMotherAge(),
-               d.getMhouseNo(), d.getmCityMuni(), d.getmProvince(), d.getfName(), d.getfMiddle(), d.getfLast(), d.getfCitizenship(), d.getfReligion(),
-               d.getfOccupation(), d.getFatherAge(), d.getPlaceanddateOfMarriage(), d.getAttendant(), d.getTime(), d.getNamePrint(), d.getAddress(),
-               d.getTitlePosition(), d.getDate(), d.getNamePrint2(), d.getAlive(), d.getRelationToChild(), d.getDate2(), d.getNamePrint3(),
-               d.getTitlePosition3(), d.getDate3(), d.getNamePrint4(), d.getTitlePosition4(), d.getDate4() )));
+               d.getYear(),d.getPlaceOfBirth(), d.getChildcityMuni(), d.getChildProvince(), d.getTypeOfBirth(), d.getMultipleBirth(), d.getBirthOrder(), 
+               d.getBabyWeight(), d.getmName(), d.getmMiddle(), d.getcLast(), d.getmCitizenship(), d.getmReligion(), d.getAlive(), d.getLiving(),
+               d.getDead(), d.getmOccupation(), d.getMotherAge(), d.getMhouseNo(), d.getmCityMuni(), d.getmProvince(), d.getfName(),
+               d.getfMiddle(), d.getfLast(), d.getfCitizenship(), d.getfReligion(), d.getfOccupation(), d.getFatherAge(), d.getPlaceanddateOfMarriage(),
+               d.getAttendant(), d.getTime(), d.getNamePrint(), d.getTitlePosition(), d.getAddress(), d.getDate(), d.getNamePrint2(),
+               d.getRelationToChild(), d.getAddress2(), d.getDate2(), d.getNamePrint3(), d.getTitlePosition3(), d.getDate3(), d.getNamePrint4(),
+               d.getTitlePosition4(), d.getDate4() )));
                
     
     }
