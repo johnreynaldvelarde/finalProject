@@ -18,10 +18,6 @@ public class Overall_Information {
    
     }
     
-  
-    // ako
-    
-    
     // method generating the unique id
     public void generateID(){
        
@@ -38,10 +34,11 @@ public class Overall_Information {
         
         // get the child name
         do {
+           
             System.out.println("");
-            System.out.println("=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=");
-            System.out.println("                           1. CHILD NAME                                 ");
-            System.out.println("+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("\t|                             1. CHILD NAME                               |\t");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
             System.out.println("");
            
             System.out.print("Enter First Name: ");
@@ -55,10 +52,11 @@ public class Overall_Information {
             if(d.getcName().isEmpty() || d.getcName().equals(" ") ||  d.getcLast().isEmpty() || d.getcLast().equals(" ")) 
             {
                 System.out.println("");
-                System.out.println("-------------------------------------------------------------------------");
-                System.out.println("       Please, don't input space or enter only in names... Thank you     ");
-                System.out.println("-------------------------------------------------------------------------");
-
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("\t|       Please, don't input space or enter only in names... Thank you     |\t");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("");
+                
                 answer01 = "1";
                 
             } else {
@@ -80,26 +78,28 @@ public class Overall_Information {
      public void askUserAgain() {
         
         System.out.println("");
-        System.out.println("=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=");
-        System.out.println("           Press [1] to try again \\nPress any key to continue           ");
-        System.out.println("+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=");
+        System.out.println("\txoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxox\t");
+        System.out.println("\t|           Press [1] to try again / Press any key to continue            |\t");
+        System.out.println("\txoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxoxox\t");
         System.out.println("");
 
     }
      
      // show list of existing birth certificate
      public void getShowList(){
-         
+              System.out.println("\t---------------------------------------------------------------------------\t");
               System.out.println("");
-              System.out.println("=========================================================================");
-              System.out.println("              Registry No                  List of Name                  ");
-              System.out.println("=========================================================================");
+              System.out.println("\t===========================================================================\t");
+              System.out.println("\t             Registry No" + "        |      " + "     List Of Names        \t");
+              System.out.println("\t===========================================================================\t");
               for(Integer key : map.keySet()){
               ArrayList value = map.get(key);
-              System.out.println("                "+key + "                 " + value.get(0)+", "+ value.get(1)+" "+ value.get(2));
+              System.out.println("\t               "+key + "             |       " + value.get(0)+", "+ value.get(1)+" "+ value.get(2)+"\t");
+              
+              
               }
               System.out.println("");
-              System.out.println("=========================================================================");
+              System.out.println("\t===========================================================================\t");
               System.out.println("");
               System.out.println("");
     }
@@ -150,42 +150,23 @@ public class Overall_Information {
         ArrayList record = map.get(key);
         if(record!=null) {
             found = true;
+            
             System.out.println("");
-            System.out.println("-------------------------------------------------------------------------");
-            System.out.println("                            RECORD FOUND                                 ");
-            System.out.println("-------------------------------------------------------------------------");
+            System.out.println("       ~o~o~o~o~o Congratulations!! You're Record has been found ~o~o~o~o~o ");
             System.out.println("");
-            System.out.println("");
-            System.out.println("");
-            System.out.println("");
-            System.out.println("=========================================================================");
-            System.out.println("                      CERTIFICATE OF LIVE BIRTH                          ");
-            System.out.println("=========================================================================");
-            System.out.println(" Registry No: "+key                                                       );
-            System.out.println("=========================================================================");
-            System.out.println("-------------------------------------------------------------------------");
-            System.out.println(" 1. CHILD NAME       (First)            (Middle)            (Last)       ");
-            System.out.println("-------------------------------------------------------------------------");
-            System.out.println("                  "+record.get(2)+"           "+record.get(1)+"              "+record.get(0));
-            System.out.println("-------------------------------------------------------------------------");
-            System.out.println("");
-            System.out.println("");
-            System.out.println("=========================================================================");
+            System.out.println("="+"=================================================");
+            System.out.println("|  \tFirst Name         :       " + record.get(1) + " \t |");
+            System.out.println("|  \tMiddle Name        :       " + record.get(2) + "  \t |");
+            System.out.println("|  \tLast Name          :       " + record.get(0) + " \t |");
+            System.out.println("="+"=================================================");
     
-            
-            
-            
             
         
         }
         else{
-            
-            System.out.println("");
-            System.out.println("-------------------------------------------------------------------------");
-            System.out.println("                          RECORD NOT FOUND                               ");
-            System.out.println("-------------------------------------------------------------------------");
-            System.out.println("");
-            
+             System.out.println("");
+             System.out.println("       ~o~o~o~o~o Ooops!! The Record has not been found ~o~o~o~o~o    ");
+             System.out.println("");
         }
         
     } 

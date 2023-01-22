@@ -16,18 +16,18 @@ public class Selection {
             do{
                 
                 System.out.println("");
-                System.out.println("=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=");
-                System.out.println("                                                                         ");
-                System.out.println("        Press [1] to create new PSA birth certificate                    ");
-                System.out.println("        Press [2] to view the new created PSA birth certificate          ");
-                System.out.println("        Press [3] to show the list of existing PSA birth certificate     ");
-                System.out.println("        Press [4] to search a existing record                            ");
-                System.out.println("        [0] === Back to the past module                                  ");
-                System.out.println("                                                                         ");
-                System.out.println("+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=++=+=+=+=+=+=");
+                System.out.println("\t===========================================================================\t");
+                System.out.println("\t|                                                                         |\t");
+                System.out.println("\t|        Press [1] to create new PSA birth certificate                    |\t");
+                System.out.println("\t|        Press [2] to view the new created PSA birth certificate          |\t");
+                System.out.println("\t|        Press [3] to show the list of existing PSA birth certificate     |\t");
+                System.out.println("\t|        Press [4] to delete the birth certificate                        |\t");
+                System.out.println("\t|        Press [0] to exit the program                                    |\t");
+                System.out.println("\t|                                                                         |\t");
+                System.out.println("\t===========================================================================\t");
                 System.out.println("");
                
-                System.out.print("Enter the selected number: ");
+                System.out.print("Press a number: ");
                 ch = sc.nextLine();
                 
                 if(ch.equals("1")){
@@ -53,16 +53,18 @@ public class Selection {
                 
                 }
                 else if(ch.equals("0")){
-                
+                    
+                    System.out.println("");
+                    System.out.println("    ~o~o~o~o~o Thank you for your time and cooperation ~o~o~o~o~o    ");
                     break;
                 
                 }
                 else{
-                   
+                    
                     System.out.println("");
-                    System.out.println("-------------------------------------------------------------------------");
-                    System.out.println("                    Invalid selection --- Try Again!!!                   ");
-                    System.out.println("-------------------------------------------------------------------------");
+                    System.out.println("\t---------------------------------------------------------------------------\t");
+                    System.out.println("\t|                    Invalid selection --- Try Again!!!                   |\t");
+                    System.out.println("\t---------------------------------------------------------------------------\t");
                     System.out.println("");
                 }
                 
