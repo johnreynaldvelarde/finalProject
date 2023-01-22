@@ -64,6 +64,7 @@ public class Data {
     private String attendant;
 
     // 19b. Certification
+    private String time;
     private String namePrint;
     private String address;
     private String titlePosition;
@@ -433,6 +434,14 @@ public class Data {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
     
 }

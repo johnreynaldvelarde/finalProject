@@ -996,12 +996,13 @@ public class Overall_Information {
                 
                 if(d.getPlaceanddateOfMarriage().isEmpty() || d.getPlaceanddateOfMarriage().equals("")){
                     
-                      System.out.println("");
-                      System.out.println("\t---------------------------------------------------------------------------\t");
-                      System.out.println("\t|               Please, wrong input, Try Again!!! ... Thank you           |\t");
-                      System.out.println("\t---------------------------------------------------------------------------\t");
-                      System.out.println("");
-                      answer01 = "1";
+                       
+                    System.out.println("");
+                    System.out.println("\t---------------------------------------------------------------------------\t");
+                    System.out.println("\t|       Please, don't input space or enter only in names... Thank you     |\t");
+                    System.out.println("\t---------------------------------------------------------------------------\t");
+                    System.out.println("");
+                    answer01 = "1";
                 }
                 else{
                     
@@ -1088,36 +1089,83 @@ public class Overall_Information {
             
         }while(answer01.equals("1"));
         
-        // 20 part
-        
+        // 19 B
         do{
             System.out.println("");
             System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
             System.out.println("\t|                        B. CERTIFICATION OF BIRTH                        |\t");
             System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
             System.out.println("");
-            System.out.print("I hereby that i attended the birth of the child who  was born alive at () o clock am/pm on the date stated about: ");
-           // = sc.nextLine();
-            System.out.print("Enter Name in print (ALL CAPITAL): ");
+            System.out.print("\tI hereby that i attended the birth of the child who  was born alive at () o clock am/pm on the date stated about: ");
+            d.setTime(sc.nextLine());
+            System.out.print("\tEnter Name in print (ALL CAPITAL): ");
             d.setNamePrint(sc.nextLine());
-            System.out.print("Enter Title or Positon: ");
-           // d.settit
-           // System.out.print("Enter Address: ");
-           // attendAdress = sc.nextLine();
-           // System.out.print("Enter Date: ");
-            //attendDate = sc.nextLine();
+            System.out.print("\tEnter Title or Positon: ");
+            d.setTitlePosition(sc.nextLine());
+            System.out.print("\tEnter Address: ");
+            d.setAddress(sc.nextLine());
+            System.out.print("\tEnter Date: ");
+            d.setDate(sc.nextLine());
             
+            if(d.getTime().isEmpty() || d.getTime().equals(" ") || d.getNamePrint().isEmpty() ||  d.getNamePrint().equals(" ") 
+                || d.getTitlePosition().isEmpty() || d.getTitlePosition().equals(" ") || d.getAddress().isEmpty() || d.getAddress().equals(" ") 
+                    || d.getDate().isEmpty() ||  d.getDate().equals(" ")){
+                
+                System.out.println("");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("\t|       Please, don't input space or enter only in names... Thank you     |\t");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("");
+                answer01 = "1";
             
-                     
+            }
+            else{
+                
+                askUserAgain();
+                System.out.print("\tEnter: ");
+                answer01 = sc.nextLine();
+            
+            }
+        
+        }while(answer01.equals("1"));
+        
+        // 20 part
+        do{
+            System.out.println("\t");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("\t|                             20. INFORMANT                               |\t");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("");
         
         
         }while(answer01.equals("1"));
         
         
+        
         // 21 part
+        do{
+            System.out.println("\t");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("\t|                            21. PREPARED BY                              |\t");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("");
+        
+        
+        }while(answer01.equals("1"));
+        
         
         
         // 22 part
+        do{
+            System.out.println("\t");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("\t|               22. RECEIVED AT THE OFFICE OF  CIVIL REGISTRAR            |\t");
+            System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
+            System.out.println("");
+        
+        
+        }while(answer01.equals("1"));
+        
                 
         
         
