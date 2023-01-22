@@ -21,13 +21,13 @@ public class Selection {
                 System.out.println("\t|        Press [1] to create new PSA birth certificate                    |\t");
                 System.out.println("\t|        Press [2] to view the new created PSA birth certificate          |\t");
                 System.out.println("\t|        Press [3] to show the list of existing PSA birth certificate     |\t");
-                System.out.println("\t|        Press [4] to delete the birth certificate                        |\t");
+                System.out.println("\t|        Press [4] to search a certain the birth certificate              |\t");
                 System.out.println("\t|        Press [0] to exit the program                                    |\t");
                 System.out.println("\t|                                                                         |\t");
                 System.out.println("\t===========================================================================\t");
                 System.out.println("");
-               
-                System.out.print("Press a number: ");
+                
+                System.out.print("\tPress a number: ");
                 ch = sc.nextLine();
                 
                 if(ch.equals("1")){

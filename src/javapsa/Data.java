@@ -10,7 +10,7 @@ public class Data {
     
     private int number;
 
-    // child 1
+    // child  info
     private String cName;
     private String cMiddle;
     private String cLast;
@@ -19,8 +19,8 @@ public class Data {
     private int Month;
     private int Year;
     private String placeOfBirth;
-    private String cityMuni;
-    private String cProvince;
+    private String childcityMuni;
+    private String childProvince;
     private String typeOfBirth;
     private String multipleBirth;
     private String birthOrder;
@@ -116,6 +116,122 @@ public class Data {
 
     public void setcLast(String cLast) {
         this.cLast = cLast;
+    }
+
+    public String getChildSex() {
+        return childSex;
+    }
+
+    public int getDay() {
+        return Day;
+    }
+
+    public int getMonth() {
+        return Month;
+    }
+
+    public int getYear() {
+        return Year;
+    }
+
+    public String getPlaceOfBirth() {
+        return placeOfBirth;
+    }
+
+   
+
+    public String getTypeOfBirth() {
+        return typeOfBirth;
+    }
+
+    public String getMultipleBirth() {
+        return multipleBirth;
+    }
+
+    public String getBirthOrder() {
+        return birthOrder;
+    }
+
+    public double getBabyWeight() {
+        return babyWeight;
+    }
+
+    public void setChildSex(String childSex) {
+        this.childSex = childSex;
+    }
+
+    public void setDay(int Day) {
+        this.Day = Day;
+    }
+
+    public void setMonth(int Month) {
+        this.Month = Month;
+    }
+
+    public void setYear(int Year) {
+        this.Year = Year;
+    }
+
+    public void setPlaceOfBirth(String placeOfBirth) {
+        this.placeOfBirth = placeOfBirth;
+    }
+
+   
+
+    public void setTypeOfBirth(String typeOfBirth) {
+        this.typeOfBirth = typeOfBirth;
+    }
+
+    public void setMultipleBirth(String multipleBirth) {
+        this.multipleBirth = multipleBirth;
+    }
+
+    public void setBirthOrder(String birthOrder) {
+        this.birthOrder = birthOrder;
+    }
+
+    public void setBabyWeight(double babyWeight) {
+        this.babyWeight = babyWeight;
+    }
+
+    public String getChildcityMuni() {
+        return childcityMuni;
+    }
+
+    public String getChildProvince() {
+        return childProvince;
+    }
+
+    public void setChildcityMuni(String childcityMuni) {
+        this.childcityMuni = childcityMuni;
+    }
+
+    public void setChildProvince(String childProvince) {
+        this.childProvince = childProvince;
+    }
+
+    public String getmName() {
+        return mName;
+    }
+
+    public String getmMiddle() {
+        return mMiddle;
+    }
+
+    public String getmLast() {
+        return mLast;
+    }
+
+    public void setmName(String mName) {
+        this.mName = mName;
+    }
+
+    public void setmMiddle(String mMiddle) {
+        this.mMiddle = mMiddle;
+    }
+
+    public void setmLast(String mLast) {
+        this.mLast = mLast;
     }
     
 }
