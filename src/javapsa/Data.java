@@ -443,5 +443,85 @@ public class Data {
     public void setTime(String time) {
         this.time = time;
     }
+
+    public String getNamePrint2() {
+        return namePrint2;
+    }
+
+    public String getAddress2() {
+        return address2;
+    }
+
+    public String getRelationToChild() {
+        return relationToChild;
+    }
+
+    public String getDate2() {
+        return date2;
+    }
+
+    public void setNamePrint2(String namePrint2) {
+        this.namePrint2 = namePrint2;
+    }
+
+    public void setAddress2(String address2) {
+        this.address2 = address2;
+    }
+
+    public void setRelationToChild(String relationToChild) {
+        this.relationToChild = relationToChild;
+    }
+
+    public void setDate2(String date2) {
+        this.date2 = date2;
+    }
+
+    public String getNamePrint3() {
+        return namePrint3;
+    }
+
+    public String getTitlePosition3() {
+        return titlePosition3;
+    }
+
+    public String getDate3() {
+        return date3;
+    }
+
+    public String getNamePrint4() {
+        return namePrint4;
+    }
+
+    public String getTitlePosition4() {
+        return titlePosition4;
+    }
+
+    public String getDate4() {
+        return date4;
+    }
+
+    public void setNamePrint3(String namePrint3) {
+        this.namePrint3 = namePrint3;
+    }
+
+    public void setTitlePosition3(String titlePosition3) {
+        this.titlePosition3 = titlePosition3;
+    }
+
+    public void setDate3(String date3) {
+        this.date3 = date3;
+    }
+
+    public void setNamePrint4(String namePrint4) {
+        this.namePrint4 = namePrint4;
+    }
+
+    public void setTitlePosition4(String titlePosition4) {
+        this.titlePosition4 = titlePosition4;
+    }
+
+    public void setDate4(String date4) {
+        this.date4 = date4;
+    }
     
 }

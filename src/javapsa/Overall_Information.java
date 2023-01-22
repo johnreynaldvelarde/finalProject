@@ -55,15 +55,6 @@ public class Overall_Information {
               System.out.println("");
               System.out.println("");
     }
-     
-     
-    // method putting all data in hashmap   
-    public void getMap(){
-    
-       map.put(d.getNumber(), new ArrayList(Arrays.asList(d.getcLast(), d.getcName(), d.getcMiddle())));
-    
-    
-    }
     
     // method to show the new created psa birth certificate
     
@@ -122,6 +113,7 @@ public class Overall_Information {
      
     public void getchildInfo(){
         
+        String answer01;
         int askUser = 0;
         String ch;
         char sex;
@@ -130,7 +122,7 @@ public class Overall_Information {
         System.out.print("\tRegistry No: " + d.getNumber());
         System.out.println("");
         
-        String answer01;
+      
         
         // get the child name
         do {
@@ -1098,7 +1090,7 @@ public class Overall_Information {
             System.out.println("");
             System.out.print("\tI hereby that i attended the birth of the child who  was born alive at () o clock am/pm on the date stated about: ");
             d.setTime(sc.nextLine());
-            System.out.print("\tEnter Name in print (ALL CAPITAL): ");
+            System.out.print("\tEnter Name in print: ");
             d.setNamePrint(sc.nextLine());
             System.out.print("\tEnter Title or Positon: ");
             d.setTitlePosition(sc.nextLine());
@@ -1136,8 +1128,34 @@ public class Overall_Information {
             System.out.println("\t|                             20. INFORMANT                               |\t");
             System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
             System.out.println("");
-        
-        
+            System.out.print("\tEnter Name in print: ");
+            d.setNamePrint2(sc.nextLine());
+            System.out.print("\tEnter relationship to child: ");
+            d.setRelationToChild(sc.nextLine());
+            System.out.print("\tEnter Address: ");
+            d.setAddress2(sc.nextLine());
+            System.out.print("\tEnter Date: ");
+            d.setDate2(sc.nextLine());
+            
+            if(d.getNamePrint2().isEmpty() ||  d.getNamePrint2().equals(" ") || d.getRelationToChild().isEmpty() || d.getRelationToChild().equals("")
+                    || d.getAddress2().isEmpty() || d.getAddress2().equals(" ")|| d.getDate2().isEmpty() ||  d.getDate2().equals(" ")) { 
+                   
+                System.out.println("");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("\t|       Please, don't input space or enter only in names... Thank you     |\t");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("");
+                answer01 = "1";
+            
+            }
+            else{
+                
+                askUserAgain();
+                System.out.print("\tEnter: ");
+                answer01 = sc.nextLine();
+            
+            }
+      
         }while(answer01.equals("1"));
         
         
@@ -1149,6 +1167,31 @@ public class Overall_Information {
             System.out.println("\t|                            21. PREPARED BY                              |\t");
             System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
             System.out.println("");
+            System.out.print("\tEnter Name in print: ");
+            d.setNamePrint3(sc.nextLine());
+            System.out.print("\tEnter Title or position: ");
+            d.setTitlePosition3(sc.nextLine());
+            System.out.print("\tEnter Date: ");
+            d.setDate3(sc.nextLine());
+            
+            if(d.getNamePrint3().isEmpty() ||  d.getNamePrint3().equals(" ") || d.getTitlePosition3().isEmpty() || d.getTitlePosition3().equals("")
+                   || d.getDate3().isEmpty() ||  d.getDate3().equals(" ")) { 
+                   
+                System.out.println("");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("\t|       Please, don't input space or enter only in names... Thank you     |\t");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("");
+                answer01 = "1";
+            
+            }
+            else{
+                
+                askUserAgain();
+                System.out.print("\tEnter: ");
+                answer01 = sc.nextLine();
+            
+            }
         
         
         }while(answer01.equals("1"));
@@ -1162,18 +1205,51 @@ public class Overall_Information {
             System.out.println("\t|               22. RECEIVED AT THE OFFICE OF  CIVIL REGISTRAR            |\t");
             System.out.println("\t+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\t");
             System.out.println("");
-        
+            System.out.print("\tEnter Name in print: ");
+            d.setNamePrint4(sc.nextLine());
+            System.out.print("\tEnter Title or position: ");
+            d.setTitlePosition4(sc.nextLine());
+            System.out.print("\tEnter Date: ");
+            d.setDate4(sc.nextLine());
+            
+            if(d.getNamePrint4().isEmpty() ||  d.getNamePrint4().equals(" ") || d.getTitlePosition4().isEmpty() || d.getTitlePosition4().equals("")
+                   || d.getDate4().isEmpty() ||  d.getDate4().equals(" ")) { 
+                   
+                System.out.println("");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("\t|       Please, don't input space or enter only in names... Thank you     |\t");
+                System.out.println("\t---------------------------------------------------------------------------\t");
+                System.out.println("");
+                answer01 = "1";
+            
+            }
+            else{
+                
+                askUserAgain();
+                System.out.print("\tEnter: ");
+                answer01 = sc.nextLine();
+            
+            }
         
         }while(answer01.equals("1"));
-        
-                
-        
-        
         
         
           // invoke this method to collect the data
          getMap();
           
+    }
+      // method putting all data in hashmap   
+    public void getMap(){
+    
+       map.put(d.getNumber(), new ArrayList(Arrays.asList(d.getcLast(), d.getcName(), d.getcMiddle(), d.getChildSex(), d.getDay(), d.getMonth(),
+               d.getYear(), d.getTypeOfBirth(), d.getMultipleBirth(), d.getBirthOrder(), d.getBabyWeight(), d.getmName(), d.getmMiddle(),
+               d.getcLast(), d.getmCitizenship(), d.getmReligion(), d.getAlive(), d.getLiving(), d.getDead(), d.getmOccupation(), d.getMotherAge(),
+               d.getMhouseNo(), d.getmCityMuni(), d.getmProvince(), d.getfName(), d.getfMiddle(), d.getfLast(), d.getfCitizenship(), d.getfReligion(),
+               d.getfOccupation(), d.getFatherAge(), d.getPlaceanddateOfMarriage(), d.getAttendant(), d.getTime(), d.getNamePrint(), d.getAddress(),
+               d.getTitlePosition(), d.getDate(), d.getNamePrint2(), d.getAlive(), d.getRelationToChild(), d.getDate2(), d.getNamePrint3(),
+               d.getTitlePosition3(), d.getDate3(), d.getNamePrint4(), d.getTitlePosition4(), d.getDate4() )));
+               
+    
     }
     
 }
